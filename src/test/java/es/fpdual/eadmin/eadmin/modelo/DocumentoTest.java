@@ -41,7 +41,7 @@ public class DocumentoTest {
 		Integer resultadoReal = documento.getCodigo();
 		Integer resultadoEsperado = 1;
 		assertEquals(resultadoEsperado, resultadoReal, 0.01);
-		assertEquals(Fecha_Creacion, documento.getFecha());
+		assertEquals(Fecha_Creacion, documento.getFechaCreacion());
 		assertEquals(Documento_Publico, documento.getPublico());
 		assertEquals(EstadoDocumento.ACTIVO, documento.getEstado());
 		assertEquals(Nombre_Documento, documento.getNombre());

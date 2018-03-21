@@ -7,13 +7,13 @@ public class DocumentoContable extends Documento {
 
 	private BigDecimal importe;
 
-	private String DNI_interesado;
+	private String dniInteresado;
 
 	public DocumentoContable(Integer codigo, String nombre, Date fecha, Boolean publico, EstadoDocumento estado,
-			BigDecimal importe, String DNI_interesado) {
+			BigDecimal importe, String dniInteresado) {
 		super(codigo, nombre, fecha, publico, estado);
 		this.importe = importe;
-		this.DNI_interesado = DNI_interesado;
+		this.dniInteresado = dniInteresado;
 	}
 
 	public BigDecimal getImporte() {
@@ -21,7 +21,7 @@ public class DocumentoContable extends Documento {
 	}
 
 	public String getDNI_interesado() {
-		return DNI_interesado;
+		return dniInteresado;
 	}
 	
 	
