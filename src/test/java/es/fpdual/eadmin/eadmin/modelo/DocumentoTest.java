@@ -77,6 +77,10 @@ public class DocumentoTest {
 		
 		assertEquals(documento.getCodigo().hashCode(),documento.hashCode());
 	}
+	@Test
+	public void comprobarToString() {
+		assertNotNull(documento.toString());
+	}
 	
 
 }

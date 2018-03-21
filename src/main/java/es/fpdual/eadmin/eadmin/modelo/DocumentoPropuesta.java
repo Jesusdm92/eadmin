@@ -13,7 +13,7 @@ public class DocumentoPropuesta extends Documento {
 		super(codigo, nombre, fecha, publico, estado);
 		this.codigoDocumentoPropuesta = codigoDocumentoPropuesta;
 		this.ejercicio = ejercicio;
-		this.grupoPolitico = grupoPolitico;
+		this.grupoPolitico = grupoPolitico; 
 
 	}
 
