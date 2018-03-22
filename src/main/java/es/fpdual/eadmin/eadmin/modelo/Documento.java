@@ -1,17 +1,20 @@
 package es.fpdual.eadmin.eadmin.modelo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Documento extends ModeloBasicoAdministracionElectronica {
 
 	
 	private Boolean publico;
 	private EstadoDocumento estado;
-
-	public Documento(Integer codigo, String nombre, Date fechaCreacion, Boolean publico, EstadoDocumento estado) {
-		super(codigo,nombre,fechaCreacion);
+	private Integer codigoVerificacion;
+	
+	public Documento(Integer codigo, String nombre, Date fechaCreacion, Boolean publico, EstadoDocumento estado,Date fechaModificacion) {
+		super(codigo,nombre,fechaCreacion,fechaModificacion);
 		this.publico = publico;
 		this.estado = estado;
+		codigoVerificacion = hashCode();
 	}
 
 	public Boolean getPublico() {
@@ -29,5 +32,9 @@ public class Documento extends ModeloBasicoAdministracionElectronica {
 		return "Documento [codigo=" + super.getCodigo() + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(super.getCodigo(),super.getNombre(),super.getFechaCreacion(),super.getFechaModificacion(),publico,estado);
+	}
 	
 }

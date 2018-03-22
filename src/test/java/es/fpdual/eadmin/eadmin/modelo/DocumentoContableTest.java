@@ -14,6 +14,7 @@ import org.junit.Test;
 public class DocumentoContableTest {
 
 	private static final Date Fecha_Creacion = new Date();
+	private static final Date Fecha_Modificacion = new Date();
 	private static final String Nombre_Documento = "Factura";
 	private static final boolean Documento_Publico = true;
 	private static final String DNI_Interesado = "15455638Y";
@@ -32,7 +33,7 @@ public class DocumentoContableTest {
 	@Before
 	public void setUp() throws Exception {
 		documento = new DocumentoContable(1, Nombre_Documento, Fecha_Creacion, Documento_Publico,
-				EstadoDocumento.ACTIVO, Importe, DNI_Interesado);
+				EstadoDocumento.ACTIVO, Fecha_Modificacion,Importe, DNI_Interesado);
 
 	}
 

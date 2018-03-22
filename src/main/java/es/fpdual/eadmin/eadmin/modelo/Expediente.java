@@ -14,8 +14,8 @@ public class Expediente extends ModeloBasicoAdministracionElectronica{
 	
 
 	public Expediente(Integer codigoExpediente, String nombreExpediente, Date fechaCreacion, Date fechaArchivado,
-			Boolean publico, EstadoExpediente estado, List<Documento> documentos) {
-		super(codigoExpediente, nombreExpediente, fechaCreacion);
+			Boolean publico, EstadoExpediente estado, List<Documento> documentos, Date fechaModificacion) {
+		super(codigoExpediente, nombreExpediente, fechaCreacion,fechaModificacion);
 		this.fechaArchivado = fechaArchivado;
 		this.publico = publico;
 		this.estado = estado;

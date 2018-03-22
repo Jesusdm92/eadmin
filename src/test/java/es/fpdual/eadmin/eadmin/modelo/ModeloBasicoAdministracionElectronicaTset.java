@@ -13,6 +13,7 @@ import org.junit.Test;
 public class ModeloBasicoAdministracionElectronicaTset {
 
 	private static final Date Fecha_Creacion = new Date();
+	private static final Date Fecha_Modificacion = new Date();
 	private static final String Nombre_Documento = "Factura";
     private static final Integer CODIGO = 1; 
 	
@@ -28,7 +29,7 @@ public class ModeloBasicoAdministracionElectronicaTset {
 
 	@Before
 	public void setUp() throws Exception {
-		documento = new ModeloBasicoAdministracionElectronicaFake(CODIGO, Nombre_Documento, Fecha_Creacion);
+		documento = new ModeloBasicoAdministracionElectronicaFake(CODIGO, Nombre_Documento, Fecha_Creacion,Fecha_Modificacion);
 
 	}
 
@@ -48,19 +49,19 @@ public class ModeloBasicoAdministracionElectronicaTset {
 	@Test
 	public void deberiaComprobarDocumentoSiEsVerdadero() {
 		
-		assertTrue(documento.equals( new ModeloBasicoAdministracionElectronicaFake(CODIGO, Nombre_Documento, Fecha_Creacion)));
+		assertTrue(documento.equals( new ModeloBasicoAdministracionElectronicaFake(CODIGO, Nombre_Documento, Fecha_Creacion,Fecha_Modificacion)));
 	}
 	@Test
 	public void deberiaComprobarDocumentoNoEsVerdadero() {
 		
-		assertFalse(documento.equals( new ModeloBasicoAdministracionElectronicaFake(2, Nombre_Documento, Fecha_Creacion)));
+		assertFalse(documento.equals( new ModeloBasicoAdministracionElectronicaFake(2, Nombre_Documento, Fecha_Creacion,Fecha_Modificacion)));
 	}
 }
 
 class ModeloBasicoAdministracionElectronicaFake extends ModeloBasicoAdministracionElectronica {
 
-	public ModeloBasicoAdministracionElectronicaFake(Integer codigo, String nombre, Date fechaCreacion) {
-		super(codigo, nombre, fechaCreacion);
+	public ModeloBasicoAdministracionElectronicaFake(Integer codigo, String nombre, Date fechaCreacion,Date FechaModificacion) {
+		super(codigo, nombre, fechaCreacion,FechaModificacion);
 		// TODO Auto-generated constructor stub
 	}
 	

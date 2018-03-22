@@ -14,6 +14,7 @@ public class DocumentoPropuestaTest {
 
 	private static final Date Fecha_Creacion = new Date();
 	private static final String Nombre_Documento = "Factura";
+	private static final Date Fecha_Modificacion = new Date();
 	private static final boolean Documento_Publico = true;
 	private static final Integer CODIGO_PROPUESTA = 1;
 	private static final Integer EJERCICIO = 2018;
@@ -32,7 +33,7 @@ public class DocumentoPropuestaTest {
 	@Before
 	public void setUp() throws Exception {
 		documento = new DocumentoPropuesta(1, Nombre_Documento, Fecha_Creacion, Documento_Publico,
-				EstadoDocumento.ACTIVO,CODIGO_PROPUESTA, EJERCICIO, GRUPO_POLITICO);
+				EstadoDocumento.ACTIVO,Fecha_Modificacion,CODIGO_PROPUESTA, EJERCICIO, GRUPO_POLITICO);
 
 	}
 

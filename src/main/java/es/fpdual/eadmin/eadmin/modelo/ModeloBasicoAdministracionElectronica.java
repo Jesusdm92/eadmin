@@ -7,13 +7,15 @@ public abstract class ModeloBasicoAdministracionElectronica {
 	protected Integer codigo;
 	protected String nombre;
 	protected Date fechaCreacion;
+	protected Date fechaModificacion;
 	
 	
-	public ModeloBasicoAdministracionElectronica(Integer codigo, String nombre, Date fechaCreacion) {
+	public ModeloBasicoAdministracionElectronica(Integer codigo, String nombre, Date fechaCreacion, Date fechaModificacion) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.fechaCreacion = fechaCreacion;
+		this.fechaModificacion = fechaModificacion;
 	}
 	
 	public Integer getCodigo() {
@@ -26,6 +28,12 @@ public abstract class ModeloBasicoAdministracionElectronica {
 		return fechaCreacion;
 	}
 	
+	
+	
+	public Date getFechaModificacion() {
+		return fechaModificacion;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof ModeloBasicoAdministracionElectronica) {

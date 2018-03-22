@@ -17,6 +17,7 @@ import es.fpdual.eadmin.repositorio.impl.RepositorioDocumentoImpl;
 public class RepositorioDocumentoImplTest {
 	
 	private static final Date Fecha_Creacion = new Date();
+	private static final Date Fecha_Modificacion = new Date();
 	private static final String Nombre_Documento = "Factura";
 	private static final boolean Documento_Publico = true;
 	
@@ -35,7 +36,7 @@ public class RepositorioDocumentoImplTest {
 	@Before
 	public void setUp() throws Exception {
 		repositorio = new RepositorioDocumentoImpl();
-		documento =  new Documento(1, Nombre_Documento, Fecha_Creacion, Documento_Publico, EstadoDocumento.ACTIVO);
+		documento =  new Documento(1, Nombre_Documento, Fecha_Creacion, Documento_Publico, EstadoDocumento.ACTIVO,Fecha_Modificacion);
 	}
 
 	@After
@@ -62,7 +63,7 @@ public class RepositorioDocumentoImplTest {
 	@Test
 	public void probarModificarDocumento() {
 		repositorio.getListaDocumentos().add(documento);
-		Documento documento2 = new Documento(1, "NombreCambiado", Fecha_Creacion, Documento_Publico, EstadoDocumento.ACTIVO);
+		Documento documento2 = new Documento(1, "NombreCambiado", Fecha_Creacion, Documento_Publico, EstadoDocumento.ACTIVO,Fecha_Modificacion);
 		repositorio.modificarDocumento(documento2);
 		assertSame("NombreCambiado", repositorio.getListaDocumentos().get(repositorio.getListaDocumentos().indexOf(documento2)).getNombre());
 	}

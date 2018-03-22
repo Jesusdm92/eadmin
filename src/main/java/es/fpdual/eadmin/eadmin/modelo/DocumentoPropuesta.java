@@ -9,8 +9,8 @@ public class DocumentoPropuesta extends Documento {
 	private String grupoPolitico;
 	
 
-	public DocumentoPropuesta(Integer codigo, String nombre, Date fecha, Boolean publico, EstadoDocumento estado, Integer codigoDocumentoPropuesta, Integer ejercicio, String grupoPolitico) {
-		super(codigo, nombre, fecha, publico, estado);
+	public DocumentoPropuesta(Integer codigo, String nombre, Date fecha, Boolean publico, EstadoDocumento estado,Date fechaModificacion, Integer codigoDocumentoPropuesta, Integer ejercicio, String grupoPolitico) {
+		super(codigo, nombre, fecha, publico, estado,fechaModificacion);
 		this.codigoDocumentoPropuesta = codigoDocumentoPropuesta;
 		this.ejercicio = ejercicio;
 		this.grupoPolitico = grupoPolitico; 

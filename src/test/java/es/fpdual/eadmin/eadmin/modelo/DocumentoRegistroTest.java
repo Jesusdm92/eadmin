@@ -13,6 +13,7 @@ import org.junit.Test;
 public class DocumentoRegistroTest {
 
 	private static final Date Fecha_Creacion = new Date();
+	private static final Date Fecha_Modificacion = new Date();
 	private static final String Nombre_Documento = "Factura";
 	private static final boolean Documento_Publico = true;
 	private static final String DNI_Interesado = "15455638Y";
@@ -31,7 +32,7 @@ public class DocumentoRegistroTest {
 	@Before
 	public void setUp() throws Exception {
 		documento = new DocumentoRegistro(1, Nombre_Documento, Fecha_Creacion, Documento_Publico,
-				EstadoDocumento.ACTIVO,Codigo_Registro,DNI_Interesado);
+				EstadoDocumento.ACTIVO,Fecha_Modificacion,Codigo_Registro,DNI_Interesado);
 
 	}
 
