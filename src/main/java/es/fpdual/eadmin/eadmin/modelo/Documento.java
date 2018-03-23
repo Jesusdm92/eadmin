@@ -26,15 +26,11 @@ public class Documento extends ModeloBasicoAdministracionElectronica {
 	}
 
 
-
 	@Override
 	public String toString() {
 		return "Documento [codigo=" + super.getCodigo() + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(super.getCodigo(),super.getNombre(),super.getFechaCreacion(),super.getFechaModificacion(),publico,estado);
-	}
+	
 	
 }

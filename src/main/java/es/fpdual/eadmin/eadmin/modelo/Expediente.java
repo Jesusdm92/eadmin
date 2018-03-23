@@ -1,5 +1,6 @@
 package es.fpdual.eadmin.eadmin.modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -46,6 +47,7 @@ public class Expediente extends ModeloBasicoAdministracionElectronica{
 					&&  getNombre().equals(((Expediente) obj).getNombre())  
 					&& getFechaCreacion().equals(((Expediente) obj).getFechaCreacion()) 
 					&& fechaArchivado.equals(((Expediente) obj).getFechaArchivado())
+					&& fechaModificacion.equals(((Expediente) obj).getFechaModificacion())
 					&& publico.equals(((Expediente) obj).getPublico())
 					&& estado.equals(((Expediente) obj).getEstado())
 					;
