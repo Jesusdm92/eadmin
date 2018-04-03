@@ -10,55 +10,68 @@ import es.fpdual.eadmin.eadmin.modelo.Documento;
 import es.fpdual.eadmin.repositorio.RepositorioDocumento;
 
 @Repository
-public class RepositorioDocumentoImpl implements RepositorioDocumento{
-	
-	private List<Documento> listaDocumentos = new ArrayList<Documento>();
+public class RepositorioDocumentoImpl implements RepositorioDocumento {
+
+	private List<Documento> listaDocumentos = new ArrayList<>();
 
 	@Override
 	public void altaDocumento(Documento documento) {
-		
-		if(listaDocumentos.contains(documento)) {
-		  throw new IllegalArgumentException("El documento ya existe");
+
+		if (listaDocumentos.contains(documento)) {
+			throw new IllegalArgumentException("El documento ya existe");
 		}
-		
+
 		listaDocumentos.add(documento);
+		System.out.println("Documento almacenado");
 	}
 
 	@Override
 	public void modificarDocumento(Documento documento) {
-		
-		if(!listaDocumentos.contains(documento)) {
+
+		if (!listaDocumentos.contains(documento)) {
 			throw new IllegalArgumentException("El documento no existe");
 		}
-		
+
 		listaDocumentos.set(listaDocumentos.indexOf(documento), documento);
-		
+
 	}
 
 	@Override
 	public void eliminarDocumento(Integer codigo) {
-		
+
 		/*
-		for(int  i = 0; i<listaDocumentos.size(); i++) {
-			if(listaDocumentos.get(i).getCodigo().equals(codigo)) {
-				documentoEncontrado = listaDocumentos.get(i);
-				break;
-			}
-		}
-		*/	
-		Optional<Documento> documentoEncontrado = listaDocumentos.stream().filter(d -> d.getCodigo().equals(codigo)).findFirst();
-		
-		if(documentoEncontrado.isPresent()) {
+		 * for(int i = 0; i<listaDocumentos.size(); i++) {
+		 * if(listaDocumentos.get(i).getCodigo().equals(codigo)) { documentoEncontrado =
+		 * listaDocumentos.get(i); break; } }
+		 */
+		Optional<Documento> documentoEncontrado = listaDocumentos.stream().filter(d -> d.getCodigo().equals(codigo))
+				.findFirst();
+
+		if (documentoEncontrado.isPresent()) {
 			listaDocumentos.remove(documentoEncontrado.get());
 		}
 
-		
 	}
 
 	public List<Documento> getListaDocumentos() {
 		return listaDocumentos;
 	}
-	
-	
+
+	@Override
+	public Documento obtenerDocumentoporCodigo(Integer codigo) {
+
+		Optional<Documento> documentoEncontrado = listaDocumentos.stream().filter(d -> d.getCodigo().equals(codigo))
+				.findFirst();
+
+		if (documentoEncontrado.isPresent()) {
+			return documentoEncontrado.get();
+		}
+		return null;
+	}
+
+	@Override
+	public List<Documento> obtenerTodosLosDocumentos() {
+		return listaDocumentos;
+	}
 
 }

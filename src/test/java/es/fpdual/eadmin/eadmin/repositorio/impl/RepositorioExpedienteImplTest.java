@@ -19,7 +19,7 @@ import es.fpdual.eadmin.eadmin.modelo.Expediente;
 import es.fpdual.eadmin.eadmin.modelo.builder.ExpedienteBuilder;
 import es.fpdual.eadmin.repositorio.impl.RepositorioExpedienteImpl;
 
-public class RepositorioServicioImplTest {
+public class RepositorioExpedienteImplTest {
 
 	private RepositorioExpedienteImpl repositorio;
 	private Expediente expediente;

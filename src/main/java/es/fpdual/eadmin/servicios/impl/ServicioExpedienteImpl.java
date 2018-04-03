@@ -1,5 +1,7 @@
 package es.fpdual.eadmin.servicios.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -69,6 +71,18 @@ public class ServicioExpedienteImpl implements ServicioExpedientes{
 				construir();
 		
 		
+	}
+
+
+	@Override
+	public Expediente obtenerExpediente(Integer codigo) {
+		return repositorioExpediente.obtenerExpediente(codigo);
+	}
+
+
+	@Override
+	public List<Expediente> obtenerListaExpediente() {
+		return repositorioExpediente.obtenerListaExpedientes();
 	}
 
 }

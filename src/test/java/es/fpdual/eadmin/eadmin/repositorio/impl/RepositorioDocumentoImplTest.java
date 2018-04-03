@@ -89,6 +89,27 @@ public class RepositorioDocumentoImplTest {
 		
 	}
 	
+	@Test 
+	public void probarObtenerDocumentoConCodigo() {
+		repositorio.getListaDocumentos().add(documento);
+		Documento documentoObtenido = repositorio.obtenerDocumentoporCodigo(documento.getCodigo());
+		assertEquals(documento, documentoObtenido);
+		
+	}
+	
+	@Test 
+	public void probarObtenerDocumentoConCodigoNoExiste() {
+		repositorio.getListaDocumentos().add(documento);
+		Documento documentoObtenido = repositorio.obtenerDocumentoporCodigo(2);
+	    assertNull(documentoObtenido);
+		
+	}
+	
+	@Test
+	public void probarObtenerListaDocumento() {
+		repositorio.getListaDocumentos().add(documento);
+		assertEquals(repositorio.getListaDocumentos(), repositorio.obtenerTodosLosDocumentos());
+	}
 	
 	
 	

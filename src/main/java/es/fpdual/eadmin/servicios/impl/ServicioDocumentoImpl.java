@@ -1,6 +1,7 @@
 package es.fpdual.eadmin.servicios.impl;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import es.fpdual.eadmin.utilidades.*;
 @Service
 public class ServicioDocumentoImpl implements ServicioDocumento {
 	
-	RepositorioDocumento repositorioDocumento;
+	private final RepositorioDocumento repositorioDocumento;
 
 	@Autowired
 	public ServicioDocumentoImpl(RepositorioDocumento repositorioDocumento) {
@@ -22,8 +23,10 @@ public class ServicioDocumentoImpl implements ServicioDocumento {
 	}
 	
 	@Override
-	public void altaDocumento(Documento documento) {
-		repositorioDocumento.altaDocumento(documento);
+	public Documento altaDocumento(Documento documento) {
+		final Documento documentoConFechaCorrecta = obtenerDocumentoConFechaCorrecta(documento);
+		repositorioDocumento.altaDocumento(documentoConFechaCorrecta);
+		return documentoConFechaCorrecta;
 		
 	}
 	@Override
@@ -60,6 +63,18 @@ public class ServicioDocumentoImpl implements ServicioDocumento {
 	@Override
 	public void eliminarDocumento(Integer codigo) {
 		repositorioDocumento.eliminarDocumento(codigo);
+		
+	}
+
+	@Override
+	public Documento obtenerDocumento(Integer codigo) {
+		return repositorioDocumento.obtenerDocumentoporCodigo(codigo);
+		
+	}
+
+	@Override
+	public List<Documento> obtenerListaDocumentos() {
+		return repositorioDocumento.obtenerTodosLosDocumentos();
 		
 	}
 

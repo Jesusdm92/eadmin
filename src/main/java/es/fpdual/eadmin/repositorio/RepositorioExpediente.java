@@ -1,5 +1,7 @@
 package es.fpdual.eadmin.repositorio;
 
+import java.util.List;
+
 import es.fpdual.eadmin.eadmin.modelo.Documento;
 import es.fpdual.eadmin.eadmin.modelo.Expediente;
 
@@ -10,5 +12,6 @@ public interface RepositorioExpediente {
 	public void eliminarExpediente(Integer codigo);
 	public Expediente asociarDocumento(Integer codigoExpediente,Documento documento);
 	public Expediente desasociarDocumento(Integer codigoExpediente, Integer codigoDocumento);
-
+    public Expediente obtenerExpediente(Integer codigo);
+    public List<Expediente> obtenerListaExpedientes();
 }
