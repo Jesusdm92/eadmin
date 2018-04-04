@@ -1,4 +1,4 @@
-package es.fpdual.eadmin.eadmin.modelo;
+package es.fpdual.eadmin.modelo;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import es.fpdual.eadmin.modelo.ModeloBasicoAdministracionElectronica;
 
 public class ModeloBasicoAdministracionElectronicaTset {
 

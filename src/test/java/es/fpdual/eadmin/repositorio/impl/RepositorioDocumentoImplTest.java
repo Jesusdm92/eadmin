@@ -1,4 +1,4 @@
-package es.fpdual.eadmin.eadmin.repositorio.impl;
+package es.fpdual.eadmin.repositorio.impl;
 
 import static org.junit.Assert.*;
 
@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.EstadoDocumento;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.EstadoDocumento;
 import es.fpdual.eadmin.repositorio.impl.RepositorioDocumentoImpl;
 
 public class RepositorioDocumentoImplTest {

@@ -1,11 +1,11 @@
-package es.fpdual.eadmin.eadmin.modelo.builder;
+package es.fpdual.eadmin.modelo.builder;
 
 import java.util.Date;
 import java.util.List;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.EstadoExpediente;
-import es.fpdual.eadmin.eadmin.modelo.Expediente;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.EstadoExpediente;
+import es.fpdual.eadmin.modelo.Expediente;
 
 public class ExpedienteBuilder {
 	

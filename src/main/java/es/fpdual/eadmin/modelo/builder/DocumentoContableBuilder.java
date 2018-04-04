@@ -1,8 +1,8 @@
-package es.fpdual.eadmin.eadmin.modelo.builder;
+package es.fpdual.eadmin.modelo.builder;
 
 import java.math.BigDecimal;
 
-import es.fpdual.eadmin.eadmin.modelo.DocumentoContable;
+import es.fpdual.eadmin.modelo.DocumentoContable;
 
 public class DocumentoContableBuilder extends DocumentoBuilder{
 	

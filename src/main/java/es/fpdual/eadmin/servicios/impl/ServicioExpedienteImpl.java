@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.Expediente;
-import es.fpdual.eadmin.eadmin.modelo.builder.DocumentoBuilder;
-import es.fpdual.eadmin.eadmin.modelo.builder.ExpedienteBuilder;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.Expediente;
+import es.fpdual.eadmin.modelo.builder.DocumentoBuilder;
+import es.fpdual.eadmin.modelo.builder.ExpedienteBuilder;
 import es.fpdual.eadmin.repositorio.RepositorioExpediente;
 import es.fpdual.eadmin.servicios.ServicioExpedientes;
 import es.fpdual.eadmin.utilidades.UtilidadesFecha;

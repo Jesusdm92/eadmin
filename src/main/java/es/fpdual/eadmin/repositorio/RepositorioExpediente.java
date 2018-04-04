@@ -2,8 +2,8 @@ package es.fpdual.eadmin.repositorio;
 
 import java.util.List;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.Expediente;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.Expediente;
 
 public interface RepositorioExpediente {
 	

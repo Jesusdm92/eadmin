@@ -6,8 +6,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.Expediente;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.Expediente;
 import es.fpdual.eadmin.repositorio.RepositorioExpediente;
 
 @Repository

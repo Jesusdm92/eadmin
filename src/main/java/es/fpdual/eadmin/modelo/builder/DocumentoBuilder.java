@@ -1,9 +1,9 @@
-package es.fpdual.eadmin.eadmin.modelo.builder;
+package es.fpdual.eadmin.modelo.builder;
 
 import java.util.Date;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.EstadoDocumento;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.EstadoDocumento;
 
 public class DocumentoBuilder {
 

@@ -1,4 +1,4 @@
-package es.fpdual.eadmin.eadmin.repositorio.impl;
+package es.fpdual.eadmin.repositorio.impl;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -13,10 +13,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.EstadoExpediente;
-import es.fpdual.eadmin.eadmin.modelo.Expediente;
-import es.fpdual.eadmin.eadmin.modelo.builder.ExpedienteBuilder;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.EstadoExpediente;
+import es.fpdual.eadmin.modelo.Expediente;
+import es.fpdual.eadmin.modelo.builder.ExpedienteBuilder;
 import es.fpdual.eadmin.repositorio.impl.RepositorioExpedienteImpl;
 
 public class RepositorioExpedienteImplTest {

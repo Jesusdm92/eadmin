@@ -2,7 +2,7 @@ package es.fpdual.eadmin.repositorio;
 
 import java.util.List;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.Documento;
 
 public interface RepositorioDocumento {
 

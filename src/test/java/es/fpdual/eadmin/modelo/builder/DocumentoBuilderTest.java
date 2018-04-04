@@ -10,9 +10,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import es.fpdual.eadmin.eadmin.modelo.Documento;
-import es.fpdual.eadmin.eadmin.modelo.EstadoDocumento;
-import es.fpdual.eadmin.eadmin.modelo.builder.DocumentoBuilder;
+import es.fpdual.eadmin.modelo.Documento;
+import es.fpdual.eadmin.modelo.EstadoDocumento;
+import es.fpdual.eadmin.modelo.builder.DocumentoBuilder;
 
 public class DocumentoBuilderTest {
 	private static final Date FECHA_CREACION = new Date();
